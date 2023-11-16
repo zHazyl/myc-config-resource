@@ -5,12 +5,11 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: message-service
-          uri: lb://message-service
-          predicates:
-            - Path=/message-service/**
-          filters:
-            - RewritePath=/message-service/(?<path>.*), /$\{path}
+        uri: lb://message-service
+        predicates:
+          - Path=/message-service/**
+        filters:
+          - RewritePath=/message-service/(?<path>.*), /$\{path}
 server:
   port: 8080
 eureka:
