@@ -4,6 +4,7 @@ spring:
       discovery:
         locator:
           enabled: true
+          lowerCaseServiceId: true
       routes:
         - id: message-service
           uri: lb://message-service
