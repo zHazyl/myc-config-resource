@@ -1,3 +1,4 @@
 spring:
   data:
-    mongodb: mongodb://localhost:27017/message_service_database
+    mongodb: mongodb://localhost:27017
+    database: message_service_database
